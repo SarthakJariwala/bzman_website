@@ -14,15 +14,15 @@ def about():
     return render_template("public/about.html")
 
 
-@app.route('/sign-up', methods=["GET", "POST"])
-def sign_up():
+# @app.route('/sign-up', methods=["GET", "POST"])
+# def sign_up():
 
-    if request.method == "POST":
+#     if request.method == "POST":
 
-        username = request.form["username"]
-        email = request.form["email"]
-        password = request.form["password"]
+#         username = request.form["username"]
+#         email = request.form["email"]
+#         password = request.form["password"]
 
-        return redirect(request.url)
+#         return redirect(request.url)
 
-    return render_template("public/sign_up.html")
+#     return render_template("public/sign_up.html")
