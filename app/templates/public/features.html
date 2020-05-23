@@ -1,0 +1,112 @@
+{% extends "public/templates/public_template.html" %}
+
+{% block title %}BZMAN Features{% endblock %}
+
+{% block main%}
+
+<style>
+    .jumbotron {
+        background-color: rgb(53, 53, 53);
+        /* Orange */
+        color: rgba(255, 255, 255, 0.788);
+        padding: 100px 50px;
+        font-size: x-large;
+    }
+
+    .container-fluid {
+        padding: 60px 40px;
+    }
+</style>
+
+<div class="jumbotron text-center">
+
+    <h1>Manage Your Bussiness Activities Effortlessly</h1>
+    <br>
+    <img src="{{ url_for('static', filename='img/screenshots/CompanyList.png') }}"
+        style='max-width: 900px;'>
+</div>
+
+<div class="container-fluid text-center">
+    <div class="row">
+        <div class="col-sm">
+            <br>
+            <br>
+            <h2 style="center-text">Effortlessly manage your bussiness activities</h2>
+            <br>
+            <h4>Create and manage your company database</h4>
+            <!-- <p>K...</p> -->
+        </div>
+        <div class="col-sm">
+            <img src="{{ url_for('static', filename='img/screenshots/NewDataBase.png') }}" style="max-width: 400px; max-height: 400px;">
+            <!-- <span class="glyphicon glyphicon-signal logo"></span> -->
+        </div>
+    </div>
+</div>
+<hr>
+
+<div class="container-fluid text-center">
+    <div class="row">
+        <div class="col-sm">
+            <img src="{{ url_for('static', filename='img/screenshots/NewInvoiceNewPayment.png') }}" style="max-width: 600px; max-height: 500px;">
+            <!-- <span class="glyphicon glyphicon-signal logo"></span> -->
+        </div>
+        <div class="col-sm">
+            <br>
+            <br>
+            <h2 style="center-text">Manage customer invoices and payments</h2>
+            <br>
+            <h4>Create and manage your company database</h4>
+            <!-- <p>K...</p> -->
+        </div>
+    </div>
+</div>
+<hr>
+
+<div class="container-fluid text-center">
+    <div class="row">
+        <div class="col-sm">
+            <br>
+            <br>
+            <h2 style="center-text">Get quick summary of customer transactions</h2>
+            <br>
+            <h4>Create and manage your company database</h4>
+            <!-- <p>K...</p> -->
+        </div>
+        <div class="col-sm">
+            <img src="{{ url_for('static', filename='img/screenshots/QuickSummary.png') }}" style="max-width: 600px; max-height: 600px;">
+            <!-- <span class="glyphicon glyphicon-signal logo"></span> -->
+        </div>
+    </div>
+</div>
+<hr>
+
+<div class="container-fluid text-center">
+    <div class="row">
+        <div class="col-sm">
+            <img src="{{ url_for('static', filename='img/screenshots/InvoiceDetails.png') }}" style="max-width: 600px; max-height: 500px;">
+            <!-- <span class="glyphicon glyphicon-signal logo"></span> -->
+        </div>
+        <div class="col-sm">
+            <br>
+            <br>
+            <h2 style="center-text">Detailed information on all invoices and payments</h2>
+            <br>
+            <h4>Track your payments and invoice balances without any headaches</h4>
+            <!-- <p>K...</p> -->
+        </div>
+    </div>
+</div>
+<hr>
+
+<!-- <div class="jumbotron text-center">
+
+    <h1>Create New Database</h1>
+
+    <div class="embed-responsive embed-responsive-4by3">
+        <iframe class="embed-responsive-item"
+            src="{{ url_for('static', filename='video/create_add_edit_entry.mp4') }}"></iframe>
+    </div>
+
+</div> -->
+
+{% endblock %}

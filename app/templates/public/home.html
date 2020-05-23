@@ -1,0 +1,44 @@
+{% extends "public/templates/public_template.html" %}
+
+{% block title %}Welcome to bzman{% endblock %}
+
+{% block main%}
+
+<style>
+    .jumbotron {
+        background-color: rgb(53, 53, 53); /* Orange */
+      color: rgba(255, 255, 255, 0.788);
+      padding: 100px 50px;
+      font-size: x-large;
+    }
+
+    .container-fluid {
+        padding: 60px 40px;
+    }
+
+    .btn-xl {
+        padding: 10px 20px;
+        font-size: 20px;
+        border-radius: 10px;
+        width:30%;
+        background-color: #4ecca3;
+        color: black;  
+    }
+</style>
+
+<div class="jumbotron text-center">
+    <!-- <h1>B Z M A N</h1> -->
+    <img src="{{ url_for('static', filename='img/bzman_logo.png') }}" alt="BZMAN logo" style="max-width:400px;">
+    <br>
+    <p>Bussiness manager to simplify your daily bussiness</p>
+    <br>
+        <form action="/features" method="GET">
+            <p>
+                <button type="submit" class="btn btn-primary btn-xl">Features</button>
+            </p>
+        </form>
+        
+        <!-- <button type="submit" class="btn btn-primary btn-xl">Download</button> -->
+</div>
+
+{% endblock %}
