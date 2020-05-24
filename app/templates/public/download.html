@@ -1,0 +1,40 @@
+{% extends "public/templates/public_template.html" %}
+
+{% block title %}Download BZMAN{% endblock %}
+
+{% block main%}
+
+<style>
+    .jumbotron {
+        background-color: rgb(53, 53, 53); /* Orange */
+      color: rgba(255, 255, 255, 0.788);
+      padding: 100px 50px;
+      font-size: x-large;
+    }
+
+    .container-fluid {
+        padding: 60px 40px;
+    }
+
+    .btn-xl {
+        padding: 10px 20px;
+        font-size: 20px;
+        border-radius: 10px;
+        width:30%;
+        background-color: #4ecca3;
+        color: black;  
+    }
+</style>
+
+<div class="jumbotron text-center">
+    <!-- <h1>B Z M A N</h1> -->
+    <img src="{{ url_for('static', filename='img/bzman_logo.png') }}" class="img-fluid" alt="BZMAN logo" style=".img-fluid.max-width: 40%; height:auto; max-width: 400px;">
+    <br><br>
+    <p>Simplify your Daily Business</p>
+    <br>
+        <form action="/download_installer" method="GET">
+            <button type="submit" class="btn btn-primary btn-xl">Download Trial</button>
+        </form>
+</div>
+
+{% endblock %}
