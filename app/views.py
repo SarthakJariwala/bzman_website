@@ -1,5 +1,5 @@
 from app import app
-from flask import render_template, request, redirect, send_from_directory
+from flask import render_template, request, redirect, send_from_directory, url_for
 import os
 
 @app.route('/')
@@ -14,26 +14,19 @@ def features():
 def about():
     return render_template("public/download.html")
 
-MYDIR = os.path.dirname(__file__)
-
-@app.route('/download_installer')
+@app.route('/download_installer', methods=['GET', 'POST'])
 def download_installer():
-    return send_from_directory(
-        os.path.join(MYDIR + '/' + 'static/downloads/trial/beta'), 
-        filename="BZMAN_BetaV2TrialSetup.exe",
-        as_attachment=True
-        )
 
+    if request.method == "POST":
+        email = request.form["email"]
+        # print(email)
+        #TODO redirect to thanks url
+        return send_from_directory(
+            os.path.join(os.path.dirname(__file__) + '/' + 'static/downloads/trial/beta'), 
+            filename="BZMAN_TrialBetaSetup.exe", as_attachment=True)
 
-# @app.route('/sign-up', methods=["GET", "POST"])
-# def sign_up():
+    return render_template('public/download.html')
 
-#     if request.method == "POST":
-
-#         username = request.form["username"]
-#         email = request.form["email"]
-#         password = request.form["password"]
-
-#         return redirect(request.url)
-
-#     return render_template("public/sign_up.html")
+@app.route('/thankyou')
+def thanks():
+    return render_template('public/thankyou.html')

@@ -6,35 +6,58 @@
 
 <style>
     .jumbotron {
-        background-color: rgb(53, 53, 53); /* Orange */
-      color: rgba(255, 255, 255, 0.788);
-      padding: 100px 50px;
-      font-size: x-large;
+        background-color: rgb(53, 53, 53);
+        /* Orange */
+        color: rgba(255, 255, 255, 0.788);
+        padding: 100px 50px;
+        font-size: x-large;
     }
 
     .container-fluid {
         padding: 60px 40px;
     }
 
-    .btn-xl {
+    /* .btn-xl {
         padding: 10px 20px;
         font-size: 20px;
         border-radius: 10px;
-        width:30%;
         background-color: #4ecca3;
-        color: black;  
-    }
+        color: black;
+    } */
 </style>
 
 <div class="jumbotron text-center">
-    <!-- <h1>B Z M A N</h1> -->
-    <img src="{{ url_for('static', filename='img/bzman_logo.png') }}" class="img-fluid" alt="BZMAN logo" style=".img-fluid.max-width: 40%; height:auto; max-width: 400px;">
+    <img src="{{ url_for('static', filename='img/bzman_logo.png') }}" alt="BZMAN logo" style="max-width: 150px;">
     <br><br>
-    <p>Simplify your Daily Business</p>
+    <h1>B Z M A N</h1>
     <br>
-        <form action="/download_installer" method="GET">
-            <button type="submit" class="btn btn-primary btn-xl">Download Trial</button>
-        </form>
+    <h4>Thank you for your interest in BZMAN. Please enter your email</h4>
+    <br>
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-10 col-md-8 col-lg-6">
+    <!-- <div class="container-fluid align-items-center"> -->
+            <form class='form-center form-group' action="/download_installer" method="POST">
+                <div class="input-group">
+                    <input type="email" name="email" class="form-control" size="25" placeholder="Email Address" required>
+                    <button type="submit" class="btn btn-primary">Download Trial</button>
+                </div>
+            </form>
+            <br>
+            <h6>System Requirements: </h6> 
+            <h6>Windows (7,8,10)</h6>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center text-justify">
+        <div class="col-10 col-md-8 col-lg-6">
+            <h4>Installation Instructions</h4> 
+            <ol>Go to your downloads folder and double click on the installer</ol>
+            <ol>You maybe asked by your OS, if you want to continue with the installation. Click 'Yes' (On Windows, you may have to click on 'Run Anyway')</ol>
+            <ol>Once the guided installation is complete, you will be able to run BZMAN!</ol>
+        </div>
+    </div>
 </div>
 
 {% endblock %}

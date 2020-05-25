@@ -1,6 +1,6 @@
 {% extends "public/templates/public_template.html" %}
 
-{% block title %}Welcome to bzman{% endblock %}
+{% block title %}BZMAN - Simplify your daily business activities{% endblock %}
 
 {% block main%}
 
@@ -20,23 +20,37 @@
         padding: 10px 20px;
         font-size: 20px;
         border-radius: 10px;
-        width:30%;
         background-color: #4ecca3;
-        color: black;  
+        color: black;
+        width: 250px;
+        height: 50px;  
+    }
+
+    .btn-toolbar-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 </style>
 
 <div class="jumbotron text-center">
     <!-- <h1>B Z M A N</h1> -->
-    <img src="{{ url_for('static', filename='img/bzman_logo.png') }}" class="img-fluid" alt="BZMAN logo" style=".img-fluid.max-width: 40%; height:auto; max-width: 400px;">
-    <br><br>
-    <p>Simplify your Daily Business</p>
-    <br>
-        <form action="/features" method="GET">
-            <button type="submit" class="btn btn-primary btn-xl">Features</button>
-        </form>
-        
-        <!-- <button type="submit" class="btn btn-primary btn-xl">Download</button> -->
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-10 col-md-8 col-lg-6">
+            <img src="{{ url_for('static', filename='img/bzman_logo.png') }}" alt="BZMAN logo" style="max-width: 300px;">
+            <br>
+            <h4>Simplify your Daily Business</h4>
+            <br>
+            <div class="btn-toolbar mb-3 btn-toolbar-center" role="toolbar">
+                <div class="btn-group mr-2" role="group">
+                    <a href="/features" class="btn btn-primary btn-xl">Check Out Features</a>
+                </div>
+                <div class="btn-group mr-2" role="group">
+                    <a href="/downloads" class="btn btn-primary btn-xl">Download Trial</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock %}

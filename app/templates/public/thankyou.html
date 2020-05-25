@@ -1,0 +1,41 @@
+{% extends "public/templates/public_template.html" %}
+
+{% block title %}Thank You for Downloading BZMAN{% endblock %}
+
+{% block main%}
+
+<style>
+    .jumbotron {
+        background-color: rgb(53, 53, 53);
+        /* Orange */
+        color: rgba(255, 255, 255, 0.788);
+        padding: 100px 50px;
+        font-size: x-large;
+    }
+
+    .container-fluid {
+        padding: 60px 40px;
+    }
+</style>
+
+<div class="jumbotron text-center">
+    <img src="{{ url_for('static', filename='img/bzman_logo.png') }}" alt="BZMAN logo" style="max-width: 150px;">
+    <br><br>
+    <h1>Thank You for Downloading B Z M A N</h1>
+    <br>
+    <h4>If you need help with the support, you can contact us at support@bzman.com</h4>
+    <br>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center text-justify">
+        <div class="col-10 col-md-8 col-lg-6">
+            <h4>Installation Instructions</h4> 
+            <ol>Go to your downloads folder and double click on the installer</ol>
+            <ol>You maybe asked by your OS, if you want to continue with the installation. Click 'Yes' (On Windows, you may have to click on 'Run Anyway')</ol>
+            <ol>Once the guided installation is complete, you will be able to run BZMAN!</ol>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
