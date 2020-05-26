@@ -14,12 +14,14 @@ def features():
 def about():
     return render_template("public/download.html")
 
+email_list=[]
+
 @app.route('/download_installer', methods=['GET', 'POST'])
 def download_installer():
 
     if request.method == "POST":
         email = request.form["email"]
-        # print(email)
+        email_list.append(email)
         #TODO redirect to thanks url
         return send_from_directory(
             os.path.join(os.path.dirname(__file__) + '/' + 'static/downloads/trial/beta'), 
