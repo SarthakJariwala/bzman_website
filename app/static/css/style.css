@@ -1,3 +1,18 @@
 body {
     background-color: #f1f1f1;
+    color: #555555;
+    font-family: 'Lato', sans-serif;
 }
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Lato', sans-serif;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+}
+
+#access {
+    margin: 0;
+    margin-bottom: 10px; /* or whatever */
+  }
