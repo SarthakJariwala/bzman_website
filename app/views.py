@@ -65,8 +65,8 @@ def download_installer():
                 db.session.commit()
 
                 return send_from_directory(
-                    os.path.join(os.path.dirname(__file__) + '/' + 'static/downloads/trial/beta'), 
-                    filename="BZMAN_TrialBetaSetup.exe", as_attachment=True)
+                    os.path.join(os.path.dirname(__file__) + '/' + 'static/downloads'), 
+                    filename="BZMANSetup.exe", as_attachment=True)
             
             except Exception as e:
                 print(e)
